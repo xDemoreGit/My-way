@@ -1,0 +1,54 @@
+#include <iostream>
+#include <time.h>  // ессли нет ошибки не обязательно, она часто вшитая.
+
+using namespace std;
+
+
+
+int main()
+{
+    //Рандомайзер чисел:
+
+    srand(time(NULL));
+
+    int result = 1 + rand() % 1000; 
+    cout << result << endl;
+   
+   
+    //Калькулятор:
+
+    float num1, num2, res;
+    cout << "enter num1:";
+    cin >> num1;
+
+    cout << "enter num2:";
+    cin >> num2;
+
+    char math;
+    cout << "enter math symbol:";
+    cin >> math;
+
+    /*
+if (math == '+')
+        res = num1 + num2;
+    else if (math == '-')
+        res = num1 - num2;
+    else if (math == '*')
+        res = num1 * num2;
+    else if (math == '/')
+        res = num1 / num2;
+    */
+
+    switch (math) {
+    case'+': res = num1 + num2; break;
+    case'-': res = num1 - num2; break;
+    case'*': res = num1 * num2; break;
+    case'/': res = num1 / num2; break;
+    default: res = 0; cout << "error"; break;
+
+    }
+
+    cout << "Result: " << res << endl;
+
+    return 0;
+}
