@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    //Работа с массивом: Вывод всего массива через цикл
+    /*     
+
+    float nums[3] = { 5, 10, 15 };
+    for (int i = 0; i < 3; i++) {
+        cout << nums[i] << endl;
+
+    }
+
+    */
+
+
+    //Работа с массивом: Заполнение массива пользователем + Сумма этих значений + Поиск наименьшего значения.
+
+    float numbers[5];
+    for (int i = 0; i < 5; i++) {
+
+        cout << "Enter Numbers " << i << ":";
+        cin >> numbers[i];
+    }
+
+    float summa = 0;
+    float min = numbers[0];
+    for (int i = 0; i < 5; i++) {
+        summa += numbers[i];
+        if (numbers[i] < min)
+            min = numbers[i];
+       
+    }
+    cout << "Summa esli che: " << summa << endl;
+    cout << "Minimal esli che: " << min << endl;
+
+
+
+    for (int i = 0; i < 5; i++) {
+        cout << "Numbers: " << numbers[i] << endl;
+    }
+
+
+
+    return 0;
+
+    
+}
