@@ -1,2 +1,52 @@
 
+======================================================================================================
+Пример Работы с Структурами и данными которые мы можем с их помощью хранить и работать с ними 
+======================================================================================================
  
+struct Point {
+    int x, y;
+
+};
+
+struct Trees {
+    string name;
+    int ages;
+    bool is_alive;
+    float height;
+    Point place;
+     
+    void get_info() {
+        cout << "Name: " << name << ". Age:  " << ages << endl;
+    }
+};
+
+
+
+int main()
+{
+    
+    Trees bereza;
+    bereza.name = "Andrey";
+    bereza.ages = 21;
+    bereza.height = 1.8;
+    bereza.is_alive = true;
+    bereza.place.x = 100;
+    bereza.place.y = 230;
+
+
+    Trees sakura;
+    sakura.name = "Laura";
+    sakura.ages = 18;
+    sakura.height = 1.7;
+    sakura.is_alive = true;
+    sakura.place.x = 230;
+    sakura.place.y = 300;
+
+
+    sakura.get_info();
+    bereza.get_info();
+
+    
+
+    return 0;
+}
