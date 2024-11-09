@@ -1,0 +1,19 @@
+
+
+void divide(float a, float b) {
+    if (b == 0) throw 404;
+    else cout << (a / b);
+}
+
+
+int main()
+{
+    try {
+        divide(4.4f, 0.0f);
+    }
+    catch (int err) {
+        if (err == 404) cout << "Error 404 bro, idk";
+    }
+
+    return 0;
+}
