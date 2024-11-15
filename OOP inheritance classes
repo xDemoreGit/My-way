@@ -1,0 +1,41 @@
+======================================================================================================
+Наследуемый класс + получение доступа к полям Родительского класса
+======================================================================================================
+
+class Pc {
+private:
+    int diagonal;
+    string os;
+public:
+    Pc(int diagonal, string os) {
+        this->diagonal = diagonal;
+            this->os = os;
+    }
+    void get_info() {
+        cout << "Os: " << this->os << ". diagonal: " << diagonal;
+    }
+
+};
+
+class laptop: public Pc {
+private:
+    float weight;
+public: 
+    laptop(int diagonal, string os, float weight): Pc(diagonal, os) {
+        this->weight = weight;
+    }
+    void get_info(){
+        Pc::get_info();
+        cout << " Weight: " << weight << endl;
+        }
+};
+
+
+
+int main()
+{
+   
+    laptop mac(16, "iOS", 1.2f);
+    mac.get_info();
+    return 0;
+}
